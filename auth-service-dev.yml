@@ -15,6 +15,19 @@ spring:
       properties:
         hibernate:
           format_sql: true
+  mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    port: 587
+    username: ecommstore98@gmail.com
+    password: gygwkyoxctlkixrs
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
 
 server:
   port: 8060
