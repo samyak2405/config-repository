@@ -5,11 +5,11 @@ spring:
     gateway:
       routes:
         - id: book-app
-          uri: lb://BOOKAPP
+          uri: lb://book-app
           predicates:
             - Path=/api/v1/book/**
         - id: search-app
-          uri: lb://SEARCHAPP
+          uri: lb://search-app
           predicates:
             - Path=/api/query/**
 server:
