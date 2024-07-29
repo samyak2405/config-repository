@@ -4,7 +4,7 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: book-app
+        - id: BOOK-APP
           uri: lb://BOOK-APP
           predicates:
             - Path=/api/v1/book/**
