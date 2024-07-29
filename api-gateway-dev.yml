@@ -11,7 +11,7 @@ spring:
         - id: search-app
           uri: lb://search-app
           predicates:
-            - Path=/api/**
+            - Path=/api/query/**
 server:
   port: 8050
   error:
