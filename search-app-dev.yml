@@ -1,6 +1,6 @@
 spring:
   application:
-    name: SearchApp
+    name: search-app
   kafka:
     bootstrap-servers: localhost:9092
     consumer:
@@ -17,8 +17,6 @@ server:
     include-stacktrace: never
     include-binding-errors: always
     include-message: always
-
-
 
 elasticsearch:
   hosts: https://localhost:9200
