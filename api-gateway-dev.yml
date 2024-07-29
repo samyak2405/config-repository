@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: book-app
+          uri: lb://book-app
+          predicates:
+            - Path=/api/v1/book/**
+        - id: search-app
+          uri: lb://search-app
+          predicates:
+            - Path=/api/**
+server:
+  port: 8050
+  error:
+    include-stacktrace: never
+    include-binding-errors: always
+    include-message: always
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
